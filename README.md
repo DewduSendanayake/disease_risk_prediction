@@ -1,13 +1,13 @@
-<p align="center">
-  <img src="https://img.shields.io/badge/🏥-Disease%20Risk%20Prediction-4F46E5?style=for-the-badge&labelColor=white" alt="Disease Risk Prediction"/>
-</p>
+
 
 <h1 align="center">🩺 Disease Risk Prediction System</h1>
 
 <p align="center">
   <strong>An AI-powered full-stack application that predicts disease risk using advanced machine learning</strong>
 </p>
-
+<p align="center">
+  <img src="https://img.shields.io/badge/🏥-Disease%20Risk%20Prediction-4F46E5?style=for-the-badge&labelColor=white" alt="Disease Risk Prediction"/>
+</p>
 ---
 
 ## 🌟 Overview
@@ -622,33 +622,6 @@ cd client/src && node validate_fields.js
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## 📄 License
-
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
-
-```
-MIT License
-
-Copyright (c) 2025 Dulhara Kaushalya
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software...
-```
 
 ---
 
