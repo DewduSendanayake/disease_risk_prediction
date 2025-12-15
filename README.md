@@ -1,210 +1,395 @@
-# Disease Risk Prediction System 🏥 
+<p align="center">
+  <img src="https://img.shields.io/badge/🏥-Disease%20Risk%20Prediction-4F46E5?style=for-the-badge&labelColor=white" alt="Disease Risk Prediction"/>
+</p>
 
-[![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
-[![React](https://img.shields.io/badge/React-19.1.1-blue.svg)](https://reactjs.org/)
-[![Flask](https://img.shields.io/badge/Flask-Latest-green.svg)](https://flask.palletsprojects.com/)
-[![LightGBM](https://img.shields.io/badge/LightGBM-ML%20Model-orange.svg)](https://lightgbm.readthedocs.io/)
+<h1 align="center">🩺 Disease Risk Prediction System</h1>
 
-A comprehensive full-stack machine learning application that predicts disease risk based on health metrics, lifestyle factors, and personal data. Built with modern web technologies and advanced ML preprocessing pipelines.
+<p align="center">
+  <strong>An AI-powered full-stack application that predicts disease risk using advanced machine learning</strong>
+</p>
 
-![Disease Risk Prediction Interface](https://via.placeholder.com/800x600/4F46E5/FFFFFF?text=Disease+Risk+Prediction+Interface)
+<p align="center">
+  <a href="#-features"><img src="https://img.shields.io/badge/✨-Features-blue?style=flat-square" alt="Features"/></a>
+  <a href="#-quick-start"><img src="https://img.shields.io/badge/🚀-Quick%20Start-green?style=flat-square" alt="Quick Start"/></a>
+  <a href="#-api-reference"><img src="https://img.shields.io/badge/📡-API-orange?style=flat-square" alt="API"/></a>
+  <a href="#-machine-learning"><img src="https://img.shields.io/badge/🤖-ML%20Pipeline-purple?style=flat-square" alt="ML Pipeline"/></a>
+</p>
 
-## 🎯 Project Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React"/>
+  <img src="https://img.shields.io/badge/Flask-Latest-000000?style=for-the-badge&logo=flask&logoColor=white" alt="Flask"/>
+  <img src="https://img.shields.io/badge/LightGBM-ML%20Model-9ACD32?style=for-the-badge&logo=lightgbm&logoColor=white" alt="LightGBM"/>
+  <img src="https://img.shields.io/badge/TailwindCSS-4.1.14-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind"/>
+  <img src="https://img.shields.io/badge/Vite-7.1.7-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite"/>
+</p>
 
-This application analyzes different health and lifestyle parameters to predict the probability of disease occurrence. The system uses a **LightGBM** model trained on processed health data with feature engineering and preprocessing.
+<p align="center">
+  <img src="https://img.shields.io/github/license/dulhara79/disease_risk_prediction?style=flat-square" alt="License"/>
+  <img src="https://img.shields.io/badge/Deployed-HuggingFace%20Spaces-FFD21E?style=flat-square&logo=huggingface" alt="Deployed"/>
+  <img src="https://img.shields.io/badge/Containerized-Docker%20Ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
+</p>
 
-## ✨ Key Features
+---
 
-- **🤖 Advanced ML Pipeline**: LightGBM model with 90% variance PCA reduction
-- **📊 Real-time Predictions**: Instant disease risk assessment
-- **🎨 Modern UI**: Beautiful React interface with Tailwind CSS
-- **🔧 Smart Preprocessing**: Automatic feature engineering and data validation
-- **📱 Responsive Design**: Works on desktop, tablet, and mobile devices
-- **⚡ Fast API**: Flask backend with optimized model loading
-- **🛡️ Input Validation**: Comprehensive client and server-side validation
-- **🎯 Risk Visualization**: Interactive gauges and risk indicators
+## 🌟 Overview
+
+**Disease Risk Prediction System** is a comprehensive full-stack machine learning application that analyzes **23 different health and lifestyle parameters** to predict the probability of disease occurrence. Built with modern web technologies and powered by a **LightGBM** classifier with advanced preprocessing pipelines.
+
+> ⚕️ **Medical Disclaimer**: This application is for **educational and research purposes only**. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical decisions.
+
+---
+
+## ✨ Features
+
+<table>
+<tr>
+<td width="50%">
+
+### 🤖 Machine Learning
+- **LightGBM Classifier** with hyperparameter tuning
+- **PCA Dimensionality Reduction** (90% variance retention)
+- **KNN Imputation** for handling missing values
+- **Smart Feature Engineering** (BMI categories, age groups, HOMA-IR)
+
+</td>
+<td width="50%">
+
+### 🎨 User Interface
+- **Modern React 19** with beautiful Tailwind CSS styling
+- **Multi-Step Form Wizard** with progress indicator
+- **Interactive Risk Gauge** visualization
+- **Responsive Design** for all devices
+
+</td>
+</tr>
+<tr>
+<td>
+
+### ⚡ Performance
+- **Vite-powered** lightning-fast development
+- **Optimized Model Loading** on server startup
+- **Docker-ready** for containerized deployment
+- **Production-ready** with Gunicorn WSGI server
+
+</td>
+<td>
+
+### 🛡️ Robust Validation
+- **Client-side** and **server-side** validation
+- **Comprehensive error handling**
+- **Field synchronization** between frontend & backend
+- **CORS** properly configured for security
+
+</td>
+</tr>
+</table>
+
+---
 
 ## 🏗️ System Architecture
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Frontend      │    │   Backend       │    │   ML Pipeline  │
-│   (React)       │◄──►│   (Flask)       │◄──►│   (LightGBM)    │
-│                 │    │                 │    │                 │
-│ • User Interface│    │ • API Endpoints │    │ • Feature Eng.  │
-│ • Form Validation│    │ • CORS Handling │    │ • Preprocessing │
-│ • Risk Display  │    │ • Data Validation│    │ • PCA Transform │
-│ • Responsive UI │    │ • Model Loading │    │ • Prediction    │
-└─────────────────┘    └─────────────────┘    └─────────────────┘
+┌─────────────────────────────────────────────────────────────────────────┐
+│                        Disease Risk Prediction System                    │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                         │
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐     │
+│  │   🎨 Frontend   │    │   🔧 Backend    │    │  🧠 ML Pipeline │     │
+│  │   React + Vite  │◄──►│     Flask       │◄──►│    LightGBM     │     │
+│  │                 │    │                 │    │                 │     │
+│  │ ▪ Multi-step UI │    │ ▪ REST API      │    │ ▪ KNN Imputer   │     │
+│  │ ▪ Form Wizard   │    │ ▪ CORS Handler  │    │ ▪ StandardScaler│     │
+│  │ ▪ Risk Gauge    │    │ ▪ Data Validator│    │ ▪ OneHotEncoder │     │
+│  │ ▪ Tailwind CSS  │    │ ▪ Model Loader  │    │ ▪ PCA Transform │     │
+│  └─────────────────┘    └─────────────────┘    └─────────────────┘     │
+│                                                                         │
+│         📱 Responsive            🐳 Docker Ready          📊 29 PCA    │
+│                                                           Components    │
+└─────────────────────────────────────────────────────────────────────────┘
 ```
+
+---
 
 ## 📁 Project Structure
 
 ```
 disease_risk_prediction/
-├── 📁 client/                     # Frontend React Application
-│   ├── 📁 src/
-│   │   ├── App.jsx               # Main React component
-│   │   ├── main.jsx              # React entry point
-│   │   ├── index.css             # Global styles
-│   │   └── validate_fields.js    # Field validation utility
-│   ├── package.json              # Frontend dependencies
-│   ├── vite.config.js            # Vite configuration
-│   ├── eslint.config.js          # ESLint configuration
-│   └── index.html                # HTML template
 │
-├── 📁 server/                     # Backend Flask Application
-│   ├── 📁 models/                # Trained ML models & preprocessors
-│   │   ├── final_diseased_prediction_model_lgbm_tuned.joblib
+├── 🎨 client/                          # Frontend Application
+│   ├── 📁 src/
+│   │   ├── App.jsx                    # Main React component (855 lines)
+│   │   ├── main.jsx                   # React entry point
+│   │   ├── index.css                  # Global styles
+│   │   └── validate_fields.js         # Field validation utility
+│   │
+│   ├── index.html                     # HTML template
+│   ├── package.json                   # NPM dependencies
+│   ├── vite.config.js                 # Vite configuration
+│   └── eslint.config.js               # ESLint configuration
+│
+├── 🔧 server/                          # Backend Application
+│   ├── 📁 models/                     # Trained ML Models & Preprocessors
+│   │   ├── final_diseased_prediction_model_lgbm_tuned.joblib  # ~2.2MB
 │   │   ├── standard_scaler.joblib
 │   │   ├── one_hot_encoder.joblib
 │   │   ├── ordinal_encoder.joblib
-│   │   ├── knn_imputer.joblib
+│   │   ├── knn_imputer.joblib         # ~3.6MB
 │   │   ├── pca_90_variance.joblib
 │   │   ├── label_encoder.joblib
 │   │   └── final_features_list.json
 │   │
-│   ├── 📁 notebook/              # Jupyter notebooks
+│   ├── 📁 notebook/                   # Jupyter Notebooks
 │   │   └── FDM_Mini_Project_correct.ipynb
 │   │
-│   ├── 📁 tests/                 # Test utilities & debugging
-│   │   ├── test_api.py
-│   │   ├── test_full_prediction.py
-│   │   ├── debug_scaler.py
-│   │   └── debug_onehot.py
+│   ├── 📁 tests/                      # Test Utilities
+│   │   ├── test_api.py                # API endpoint testing
+│   │   ├── test_full_prediction.py    # Full pipeline testing
+│   │   ├── test_preprocess.py         # Preprocessing testing
+│   │   ├── debug_scaler.py            # Scaler debugging
+│   │   └── debug_onehot.py            # OneHot debugging
 │   │
-│   ├── app.py                    # Flask application entry point
-│   ├── config.py                 # Configuration & constants
-│   ├── preprocessor.py           # ML preprocessing pipeline
-│   ├── requirements.txt          # Python dependencies
-│   └── train_and_save_preprocessors.py # Model training script
+│   ├── app.py                         # Flask application entry
+│   ├── config.py                      # Configuration & constants
+│   ├── preprocessor.py                # ML preprocessing pipeline
+│   ├── train_and_save_preprocessors.py # Model training script
+│   ├── requirements.txt               # Python dependencies
+│   ├── Dockerfile                     # Docker configuration
+│   └── railway.json                   # Railway deployment config
 │
-├── LICENSE                       # MIT License
-├── README.md                     # This file
-└── .gitignore                   # Git ignore rules
+├── 📁 models/                          # Shared model resources
+│   └── final_features_list.json
+│
+├── 📓 FDM_Mini_Project_Best_Model.ipynb   # Main ML notebook (~1.2MB)
+├── 📋 test_summary.html               # Test results summary
+├── 📄 LICENSE                         # MIT License
+├── 📖 README.md                       # This file
+└── 🙈 .gitignore                      # Git ignore rules
 ```
+
+---
 
 ## 🔧 Technology Stack
 
-### Frontend
-- **React 19.1.1** - Modern UI framework
-- **Vite 7.1.9** - Fast build tool and dev server
-- **Tailwind CSS 4.1.14** - Utility-first CSS framework
-- **Lucide React** - Beautiful icon library
-- **ESLint** - Code linting and quality
+<table>
+<tr>
+<th>Layer</th>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
+<tr>
+<td rowspan="4"><strong>🎨 Frontend</strong></td>
+<td><img src="https://img.shields.io/badge/React-19.1.1-61DAFB?logo=react&logoColor=white" alt="React"/></td>
+<td>Modern UI framework with hooks</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/Vite-7.1.7-646CFF?logo=vite&logoColor=white" alt="Vite"/></td>
+<td>Lightning-fast build tool & dev server</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/Tailwind-4.1.14-06B6D4?logo=tailwindcss&logoColor=white" alt="Tailwind"/></td>
+<td>Utility-first CSS framework</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/Lucide-Icons-F56565" alt="Lucide"/></td>
+<td>Beautiful, consistent icon library</td>
+</tr>
+<tr>
+<td rowspan="3"><strong>🔧 Backend</strong></td>
+<td><img src="https://img.shields.io/badge/Flask-Latest-000000?logo=flask&logoColor=white" alt="Flask"/></td>
+<td>Lightweight Python web framework</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/Flask--CORS-Enabled-000000" alt="Flask-CORS"/></td>
+<td>Cross-origin resource sharing</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/Gunicorn-WSGI-499848?logo=gunicorn&logoColor=white" alt="Gunicorn"/></td>
+<td>Production-grade WSGI server</td>
+</tr>
+<tr>
+<td rowspan="5"><strong>🧠 ML/AI</strong></td>
+<td><img src="https://img.shields.io/badge/LightGBM-Classifier-9ACD32" alt="LightGBM"/></td>
+<td>Gradient boosting framework</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/scikit--learn-Preprocessing-F7931E?logo=scikitlearn&logoColor=white" alt="scikit-learn"/></td>
+<td>ML preprocessing & utilities</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/pandas-Data-150458?logo=pandas&logoColor=white" alt="pandas"/></td>
+<td>Data manipulation & analysis</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/NumPy-Numerical-013243?logo=numpy&logoColor=white" alt="NumPy"/></td>
+<td>Numerical computing</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/joblib-Serialization-FF6B6B" alt="joblib"/></td>
+<td>Model serialization & loading</td>
+</tr>
+<tr>
+<td rowspan="2"><strong>🚀 DevOps</strong></td>
+<td><img src="https://img.shields.io/badge/Docker-Containerization-2496ED?logo=docker&logoColor=white" alt="Docker"/></td>
+<td>Container deployment</td>
+</tr>
+<tr>
+<td><img src="https://img.shields.io/badge/HuggingFace-Spaces-FFD21E?logo=huggingface" alt="HuggingFace"/></td>
+<td>Cloud deployment platform</td>
+</tr>
+</table>
 
-### Backend
-- **Flask** - Lightweight Python web framework
-- **Flask-CORS** - Cross-origin resource sharing
-- **Python 3.11+** - Programming language
+---
 
-### Machine Learning
-- **LightGBM** - Gradient boosting framework
-- **scikit-learn** - ML preprocessing and utilities
-- **pandas** - Data manipulation and analysis
-- **numpy** - Numerical computing
-- **joblib** - Model serialization
+## 📊 Input Parameters
 
-### Development Tools
-- **Git** - Version control
-- **npm** - Package management
-- **Python virtual environment** - Dependency isolation
-
-## 📊 Input Parameters (23 Features)
-
-The model accepts the following input parameters:
+The model analyzes **23 health and lifestyle features** organized into 5 categories:
 
 ### 👤 Personal Information
-- **Gender**: Male/Female
-- **Age**: 18-100 years
-- **Income**: Annual income ($)
-- **Marital Status**: Single/Married/Divorced/Widowed
-- **Work Hours**: Hours per week (0-80)
+| Parameter | Type | Range | Description |
+|-----------|------|-------|-------------|
+| Gender | Select | Male/Female | Biological gender |
+| Age | Number | 18-100 years | Age in full years |
+| Income | Number | $0-$500,000 | Annual gross income |
+| Marital Status | Select | Single/Married/Divorced | Legal marital status |
+| Work Hours | Number | 0-80 hrs/week | Weekly work hours |
 
 ### 💓 Health Vitals
-- **Blood Pressure**: Systolic pressure (90-200 mmHg)
-- **Heart Rate**: Beats per minute (40-150 BPM)
-- **Glucose**: Blood glucose level (60-400 mg/dL)
-- **Insulin**: Insulin level (1-50 μU/mL)
-- **Cholesterol**: Total cholesterol (100-400 mg/dL)
-- **Mental Health Score**: Psychological wellbeing (1-100)
+| Parameter | Type | Range | Description |
+|-----------|------|-------|-------------|
+| Blood Pressure | Number | 90-200 mmHg | Systolic pressure |
+| Heart Rate | Number | 40-150 BPM | Resting heart rate |
+| Glucose | Number | 60-400 mg/dL | Blood glucose level |
+| Insulin | Number | 1-50 μU/mL | Fasting insulin |
+| Cholesterol | Number | 100-400 mg/dL | Total cholesterol |
+| Mental Health Score | Number | 1-100 | Psychological wellbeing |
 
 ### 📏 Physical Measurements
-- **BMI**: Body Mass Index (15-50)
-- **Waist Size**: Waist circumference (50-150 cm)
-- **Physical Activity**: Hours per week (0-40)
+| Parameter | Type | Range | Description |
+|-----------|------|-------|-------------|
+| BMI | Number | 15-50 | Body Mass Index |
+| Waist Size | Number | 50-150 cm | Waist circumference |
+| Physical Activity | Number | 0-40 hrs/week | Exercise duration |
 
 ### 🍎 Lifestyle & Diet
-- **Calorie Intake**: Daily calories (1000-5000)
-- **Sugar Intake**: Grams per day (0-200g)
-- **Water Intake**: Liters per day (0-10L)
-- **Dietary Habits**: Balanced/High-Carb/Low-Carb/Vegetarian/Vegan/Keto
-- **Exercise Type**: Cardio/Strength/Mixed/Yoga/Swimming/Cycling/Undefined
+| Parameter | Type | Options | Description |
+|-----------|------|---------|-------------|
+| Calorie Intake | Number | 1000-5000 | Daily calories |
+| Sugar Intake | Number | 0-200 g | Daily sugar consumption |
+| Water Intake | Number | 0-10 L | Daily water intake |
+| Dietary Habits | Select | Balanced, Vegetarian, Vegan, Keto, etc. | Eating pattern |
+| Exercise Type | Select | Cardio, Strength, Mixed | Primary exercise |
 
 ### 🚭 Habits & Stress
-- **Smoking Status**: Never/Former Smoker/Current Smoker/Heavy Smoker
-- **Alcohol Consumption**: Not Drinking/Occasionally/Moderate/Regularly/Frequently
-- **Caffeine Intake**: Various levels from None to High
-- **Stress Level**: Low/Medium/High
+| Parameter | Type | Options | Description |
+|-----------|------|---------|-------------|
+| Smoking Status | Select | Never, Former, Current, Heavy | Tobacco use |
+| Alcohol Consumption | Select | None, Light, Moderate, Heavy | Alcohol intake |
+| Caffeine Intake | Select | None, Low, Medium, High | Caffeine consumption |
+| Stress Level | Select | Low, Medium, High | Perceived stress |
 
-## 🔍 Machine Learning Pipeline
+---
 
-### 1. **Data Preprocessing**
+## 🤖 Machine Learning Pipeline
+
+The prediction system uses a sophisticated **6-stage ML pipeline**:
+
 ```python
-# KNN Imputation for missing values
-knn_imputer = KNNImputer(n_neighbors=5)
-
-# Feature Engineering
-- BMI categorization (Underweight/Normal/Overweight/Obese)
-- Age grouping (Young/Adult/Middle-aged/Senior) 
-- HOMA-IR calculation: (Glucose × Insulin) / 405
-- Diabetes risk flagging based on glucose levels
+📥 Raw Input (23 features)
+        │
+        ▼
+┌───────────────────────────────────────┐
+│ Stage 1: Sanitization & Coercion      │
+│  • Convert data types                 │
+│  • Handle unknown categories          │
+│  • Map user inputs to model features  │
+└───────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────┐
+│ Stage 2: KNN Imputation               │
+│  • Handle missing values              │
+│  • 5-neighbor imputation              │
+│  • Columns: blood_pressure, heart_rate│
+│             insulin, income           │
+└───────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────┐
+│ Stage 3: Feature Engineering          │
+│  • BMI categorization (4 groups)      │
+│  • Age grouping (Young→Senior)        │
+│  • HOMA-IR: (glucose × insulin) / 405 │
+│  • Diabetes risk flagging             │
+└───────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────┐
+│ Stage 4: Scaling & Encoding           │
+│  • StandardScaler (18 numerical)      │
+│  • OneHotEncoder (15 categorical)     │
+│  • OrdinalEncoder (2 ordinal)         │
+└───────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────┐
+│ Stage 5: PCA Transformation           │
+│  • 90% variance retention             │
+│  • Dimensionality reduction           │
+│  • Output: 29 principal components    │
+└───────────────────────────────────────┘
+        │
+        ▼
+┌───────────────────────────────────────┐
+│ Stage 6: LightGBM Prediction          │
+│  • n_estimators: 400                  │
+│  • learning_rate: 0.1                 │
+│  • max_depth: 12                      │
+│  • num_leaves: 70                     │
+│  • min_child_samples: 20              │
+└───────────────────────────────────────┘
+        │
+        ▼
+📤 Prediction (Disease / No Disease + Probability)
 ```
 
-### 2. **Feature Scaling & Encoding**
+### 🔬 Feature Engineering Details
+
 ```python
-# Standard Scaling for numerical features
-StandardScaler()
+# BMI Categorization
+BMI_BINS = [0, 18.5, 25.0, 30.0, ∞]
+BMI_LABELS = ['Underweight', 'Normal', 'Overweight', 'Obese']
 
-# One-Hot Encoding for categorical features  
-OneHotEncoder(drop='first', handle_unknown='ignore')
+# Age Grouping
+AGE_BINS = [18, 26, 41, 61, ∞]
+AGE_LABELS = ['Young', 'Adult', 'Middle-aged', 'Senior']
 
-# Ordinal Encoding for ordered categories
-OrdinalEncoder()
+# HOMA-IR (Insulin Resistance Score)
+HOMA_IR = (Glucose × Insulin) / 405
+
+# Diabetes Risk Flag
+diabetes_risk = 'High Risk' if Glucose > 125 else 'Normal/Pre-Risk'
 ```
 
-### 3. **Dimensionality Reduction**
-```python
-# PCA with 90% variance retention
-PCA(n_components=0.90)
-```
-
-### 4. **Model Prediction**
-```python
-# Tuned LightGBM Classifier
-LGBMClassifier(
-    n_estimators=400,
-    learning_rate=0.1, 
-    max_depth=12,
-    num_leaves=70,
-    min_child_samples=20
-)
-```
+---
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### 📋 Prerequisites
+
 - **Node.js** 18+ and npm
 - **Python** 3.11+
 - **Git**
 
-### 1. Clone the Repository
+### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/dulhara79/disease_risk_prediction.git
 cd disease_risk_prediction
 ```
 
-### 2. Backend Setup
+### 2️⃣ Backend Setup
+
 ```bash
 # Navigate to server directory
 cd server
@@ -213,9 +398,9 @@ cd server
 python -m venv .venv
 
 # Activate virtual environment
-# Windows:
+# 🪟 Windows:
 .venv\Scripts\activate
-# macOS/Linux:
+# 🍎 macOS/Linux:
 source .venv/bin/activate
 
 # Install dependencies
@@ -225,29 +410,66 @@ pip install -r requirements.txt
 python app.py
 ```
 
-The backend will be available at: `http://127.0.0.1:8000`
+🟢 **Backend running at:** `http://127.0.0.1:8000`
 
-### 3. Frontend Setup
+### 3️⃣ Frontend Setup
+
 ```bash
-# Navigate to client directory (in a new terminal)
+# Navigate to client directory (new terminal)
 cd client
 
 # Install dependencies
 npm install
 
-# Start the development server
+# Start development server
 npm run dev
 ```
 
-The frontend will be available at: `http://localhost:5173`
+🟢 **Frontend running at:** `http://localhost:5173`
 
-### 4. Access the Application
-Open your browser and go to `http://localhost:5173` to use the application.
+### 4️⃣ Access the Application
 
-## 🔬 API Documentation
+Open your browser and navigate to `http://localhost:5173` 🎉
 
-### POST `/predict`
-Predicts disease risk based on input parameters.
+---
+
+## 🐳 Docker Deployment
+
+```bash
+# Navigate to server directory
+cd server
+
+# Build the Docker image
+docker build -t disease-risk-api .
+
+# Run the container
+docker run -p 8000:8000 disease-risk-api
+```
+
+---
+
+## 📡 API Reference
+
+### 🔍 Health Check
+
+```http
+GET /
+```
+
+**Response:**
+```json
+{
+    "status": "API is operational",
+    "version": "1.0"
+}
+```
+
+### 🔮 Predict Disease Risk
+
+```http
+POST /predict
+Content-Type: application/json
+```
 
 **Request Body:**
 ```json
@@ -278,135 +500,258 @@ Predicts disease risk based on input parameters.
 }
 ```
 
-**Response:**
+**Success Response (200):**
 ```json
 {
+    "status": "success",
     "prediction_label": "Disease",
-    "probability_of_disease": 0.7839,
-    "status": "success"
+    "probability_of_disease": 0.7839
 }
 ```
 
+**Error Response (400):**
+```json
+{
+    "error": "Missing required features in input data",
+    "missing": ["age", "bmi"]
+}
+```
+
+---
+
 ## 🧪 Testing
 
-### Backend Testing
+### Backend Tests
+
 ```bash
 cd server
 
-# Test preprocessing pipeline
-python tests/test_preprocess.py
-
-# Test full prediction pipeline  
-python tests/test_full_prediction.py
-
 # Test API endpoint
 python tests/test_api.py
+
+# Test full prediction pipeline
+python tests/test_full_prediction.py
+
+# Test preprocessing only
+python tests/test_preprocess.py
+
+# Debug utilities
+python tests/debug_scaler.py
+python tests/debug_onehot.py
 ```
 
-### Frontend Testing
+### Frontend Tests
+
 ```bash
 cd client
 
-# Run linting
+# Run ESLint
 npm run lint
 
 # Validate field synchronization
 node src/validate_fields.js
 ```
 
-## 🔧 Configuration
+---
 
-### Backend Configuration (`server/config.py`)
-- Model file paths
-- Feature column definitions  
-- Preprocessing parameters
-- API settings
+## ⚙️ Configuration
 
-### Frontend Configuration (`client/src/App.jsx`)
-- API endpoint URL
-- Form field definitions
-- Validation rules
-- UI styling
+### Backend (`server/config.py`)
 
-## 📈 Model Performance
+```python
+# Model paths
+MODELS_DIR = Path("models")
+FINAL_MODEL_PATH = MODELS_DIR/'final_diseased_prediction_model_lgbm_tuned.joblib'
 
-- **Algorithm**: LightGBM with hyperparameter tuning
-- **Features**: 23 input features → 29 PCA components
-- **Training**: RandomizedSearchCV with 3-fold cross-validation
-- **Validation**: ROC-AUC scoring with SMOTE balancing
+# Feature columns
+USER_INPUT_COLUMNS = [
+    'gender', 'age', 'blood_pressure', 'heart_rate', ...
+]
 
-## 🛠️ Development
+# Preprocessing parameters
+BMI_BINS = [0, 18.5, 25.0, 30.0, float('inf')]
+AGE_BINS = [18, 26, 41, 61, float('inf')]
+HOMA_IR_DIVISOR = 405.0
+GLUCOSE_RISK_THRESHOLD = 125
+```
 
-### Running in Development Mode
+### Frontend (`client/src/App.jsx`)
 
-1. **Backend Development**:
-   ```bash
-   cd server
-   python app.py  # Debug mode enabled
-   ```
+```javascript
+// API endpoint
+const API_ENDPOINT = "https://dulharakaushalya-disease-risk-backend.hf.space/run/predict";
 
-2. **Frontend Development**:
-   ```bash
-   cd client
-   npm run dev  # Hot reload enabled
-   ```
-
-### Building for Production
-
-1. **Frontend Build**:
-   ```bash
-   cd client
-   npm run build
-   ```
-
-2. **Backend Production**:
-   ```bash
-   # Use a production WSGI server like Gunicorn
-   pip install gunicorn
-   gunicorn -w 4 -b 0.0.0.0:8000 app:app
-   ```
-
-## 🚨 Troubleshooting
-
-### Common Issues
-
-1. **Model Loading Errors**:
-   ```bash
-   # Ensure all model files exist in server/models/
-   ls server/models/
-   ```
-
-2. **CORS Errors**:
-   ```python
-   # Check CORS configuration in app.py
-   CORS(app, resources={r"/predict": {"origins": "http://localhost:5173"}})
-   ```
-
-3. **Feature Mismatch**:
-   ```bash
-   # Validate field synchronization
-   cd client/src && node validate_fields.js
-   ```
-
-4. **Port Conflicts**:
-   - Frontend: Change port in `vite.config.js`
-   - Backend: Change port in `app.py`
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-
-<div align="center">
-
-**⚕️ Important Disclaimer ⚕️**
-
-*This application is for educational and research purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical decisions.*
-
-</div>
+// Input order (must match backend)
+const INPUT_ORDER = [
+    "gender", "age", "blood_pressure", ...
+];
+```
 
 ---
 
-*Made with ❤️ for Data Mining!*
+## 📈 Model Performance
 
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference
+| Metric | Value |
+|--------|-------|
+| **Algorithm** | LightGBM Classifier |
+| **Input Features** | 23 raw → 29 PCA components |
+| **Training Method** | RandomizedSearchCV (3-fold CV) |
+| **Class Balancing** | SMOTE |
+| **Scoring Metric** | ROC-AUC |
+
+### LightGBM Hyperparameters
+
+```python
+LGBMClassifier(
+    n_estimators=400,
+    learning_rate=0.1,
+    max_depth=12,
+    num_leaves=70,
+    min_child_samples=20
+)
+```
+
+---
+
+## 🛠️ Development
+
+### Development Mode
+
+```bash
+# Backend (with debug mode)
+cd server
+python app.py  # Debug mode auto-enabled
+
+# Frontend (with hot reload)
+cd client
+npm run dev
+```
+
+### Production Build
+
+```bash
+# Frontend production build
+cd client
+npm run build
+
+# Backend with Gunicorn
+pip install gunicorn
+gunicorn -w 4 -b 0.0.0.0:8000 app:app
+```
+
+---
+
+## 🚨 Troubleshooting
+
+<details>
+<summary><strong>❌ Model Loading Errors</strong></summary>
+
+Ensure all model files exist:
+```bash
+ls server/models/
+# Should contain:
+# - final_diseased_prediction_model_lgbm_tuned.joblib
+# - standard_scaler.joblib
+# - one_hot_encoder.joblib
+# - ordinal_encoder.joblib
+# - knn_imputer.joblib
+# - pca_90_variance.joblib
+# - label_encoder.joblib
+# - final_features_list.json
+```
+</details>
+
+<details>
+<summary><strong>❌ CORS Errors</strong></summary>
+
+Check CORS configuration in `server/app.py`:
+```python
+CORS(app, resources={r"/predict": {"origins": [
+    "http://localhost:5173",  # Local development
+    "https://disease-risk-prediction-frontend.vercel.app"  # Production
+]}})
+```
+</details>
+
+<details>
+<summary><strong>❌ Feature Mismatch</strong></summary>
+
+Validate field synchronization:
+```bash
+cd client/src && node validate_fields.js
+```
+</details>
+
+<details>
+<summary><strong>❌ Port Conflicts</strong></summary>
+
+- **Frontend**: Modify `vite.config.js`
+- **Backend**: Modify port in `app.py`
+</details>
+
+---
+
+## 🌐 Deployment
+
+### Currently Deployed
+
+| Service | Platform | URL |
+|---------|----------|-----|
+| 🔧 Backend | HuggingFace Spaces | [dulharakaushalya-disease-risk-backend.hf.space](https://dulharakaushalya-disease-risk-backend.hf.space) |
+| 🎨 Frontend | Vercel | [disease-risk-prediction-frontend.vercel.app](https://disease-risk-prediction-frontend.vercel.app) |
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+```
+MIT License
+
+Copyright (c) 2025 Dulhara Kaushalya
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software...
+```
+
+---
+
+## 👩‍💻 Author
+
+<p align="center">
+  <strong>Dulhara Kaushalya</strong><br>
+  <em>Full Stack Developer & ML Enthusiast</em>
+</p>
+
+---
+
+<div align="center">
+
+### ⭐ Star this repo if you found it helpful!
+
+**Made with ❤️ for Data Mining & Healthcare AI**
+
+---
+
+<p align="center">
+  <strong>⚕️ Important Disclaimer ⚕️</strong><br>
+  <em>This application is for educational and research purposes only. It should not be used as a substitute for professional medical advice, diagnosis, or treatment. Always consult with qualified healthcare professionals for medical decisions.</em>
+</p>
+
+</div>
