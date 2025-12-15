@@ -559,55 +559,6 @@ gunicorn -w 4 -b 0.0.0.0:8000 app:app
 
 ---
 
-## 🚨 Troubleshooting
-
-<details>
-<summary><strong>❌ Model Loading Errors</strong></summary>
-
-Ensure all model files exist:
-```bash
-ls server/models/
-# Should contain:
-# - final_diseased_prediction_model_lgbm_tuned.joblib
-# - standard_scaler.joblib
-# - one_hot_encoder.joblib
-# - ordinal_encoder.joblib
-# - knn_imputer.joblib
-# - pca_90_variance.joblib
-# - label_encoder.joblib
-# - final_features_list.json
-```
-</details>
-
-<details>
-<summary><strong>❌ CORS Errors</strong></summary>
-
-Check CORS configuration in `server/app.py`:
-```python
-CORS(app, resources={r"/predict": {"origins": [
-    "http://localhost:5173",  # Local development
-    "https://disease-risk-prediction-frontend.vercel.app"  # Production
-]}})
-```
-</details>
-
-<details>
-<summary><strong>❌ Feature Mismatch</strong></summary>
-
-Validate field synchronization:
-```bash
-cd client/src && node validate_fields.js
-```
-</details>
-
-<details>
-<summary><strong>❌ Port Conflicts</strong></summary>
-
-- **Frontend**: Modify `vite.config.js`
-- **Backend**: Modify port in `app.py`
-</details>
-
----
 
 ## 🌐 Deployment
 
@@ -621,8 +572,6 @@ cd client/src && node validate_fields.js
 ---
 
 
----
-
 ## 👩‍💻 Authors
 
 <p align="center">
@@ -631,8 +580,6 @@ cd client/src && node validate_fields.js
   <strong>Senuvi Layathma</strong><br>
   <strong>Uvindu Seneviratne</strong><br>
 </p>
-
----
 
 <div align="center">
 
@@ -657,7 +604,8 @@ cd client/src && node validate_fields.js
   <img src="https://img.shields.io/badge/Deployed-HuggingFace%20Spaces-FFD21E?style=flat-square&logo=huggingface" alt="Deployed"/>
   <img src="https://img.shields.io/badge/Containerized-Docker%20Ready-2496ED?style=flat-square&logo=docker&logoColor=white" alt="Docker"/>
 </p>
-**Made with ❤️ for Data Mining & Healthcare AI**
+
+Made with ❤️ for Data Mining & Healthcare AI
 
 ---
 
