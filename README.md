@@ -7,7 +7,6 @@
   <img src="https://img.shields.io/badge/🏥-Disease%20Risk%20Prediction-4F46E5?style=for-the-badge&labelColor=white" alt="Disease Risk Prediction"/>
 </p>
 
-
 ## 🌟 Overview
 
 **Disease Risk Prediction System** is a comprehensive full-stack machine learning application that analyzes **23 different health and lifestyle parameters** to predict the probability of disease occurrence. Built with modern web technologies and powered by a **LightGBM** classifier with advanced preprocessing pipelines.
